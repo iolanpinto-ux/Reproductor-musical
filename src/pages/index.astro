@@ -1,11 +1,38 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Welcome from "../components/Welcome.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<section class="flex-1 overflow-y-auto px-8 pb-32 pt-4">
+		<div class="gap-6">
+			<div>
+				<div class="relative rounded-3xl overflow-hidden  group">
+					<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/unnamed.png" alt="" />
+					<div class="">
+						<p>NEON ECHOES</p>
+						<p>
+							Experience the latest algorithmic masterpiece from
+							the frontier of electronic soul.
+						</p>
+						<div>
+							<button>play now</button>
+							<button>follow</button>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="border border-gray-900 bg-gray-800">
+						<p>New Waves</p>
+						<p>Daily Mix 01</p>
+						icon
+					</div>
+					<div class="border border-gray-900 bg-gray-800">
+						<p>Top Charts</p>
+					</div>
+				</div>
+			</div>
+			<div></div>
+		</div>
+	</section>
 </Layout>
