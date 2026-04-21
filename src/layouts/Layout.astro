@@ -1,5 +1,6 @@
 ---
 import tailwindcss from '@tailwindcss/vite'
+import "../styles/global.css";
 ---
 <!doctype html>
 <html lang="en">
@@ -11,35 +12,11 @@ import tailwindcss from '@tailwindcss/vite'
 		<meta name="generator" content={Astro.generator} />
 		<title>Sonic Luminary</title>
 	</head>
-	<body>
+	<body class="bg-black text-white">
 		<div></div>
 		<div></div>
 
 		<slot />
-		<footer class="left-0 w-full h-24 flex justify-between items-center px-10">
-			<div>
-				<img src="" alt="">
-				<div>
-					<p>Cyber Soul</p>
-					<p>The Glitch Factor</p>
-				</div>
-				
-			</div>
-			<div>
-				<div></div>
-				<div></div>
-			</div>
-			<div>
-				<button></button>
-				<button></button>
-				<div>
-					<button></button>
-					<div></div>
-				</div>
-				<button></button>
-			</div>
-			
-		</footer>
 	</body>
 </html>
 
