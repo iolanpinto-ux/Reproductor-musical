@@ -1,104 +1,80 @@
 ---
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import Musica from "../components/Musica.astro";
+
+const response = await fetch("https://api.institutoalfa.org/api/songs");
+const { songs } = await response.json();
 ---
 
 <Layout>
-	<section class="flex-1 overflow-y-auto px-8 pb-32 pt-4">
+	<section class="">
 		<div class="gap-6">
-			<div class="flex">
-				<div class="relative rounded-3xl overflow-hidden  group">
-					<img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="/unnamed.png" alt="" />
-					<div class="">
-						<p>NEON ECHOES</p>
-						<p>
-							Experience the latest algorithmic masterpiece from
-							the frontier of electronic soul.
-						</p>
-						<div>
-							<button class="neon-gradient-bg">play now</button>
-							<button>follow</button>
-						</div>
-					</div>
-				</div>
-				<div>
-					<div class="border border-gray-900 bg-gray-800">
-						<p>New Waves</p>
-						<p>Daily Mix 01</p>
-						icon
-					</div>
-					<div class="border border-gray-900 bg-gray-800">
-						<p>Top Charts</p>
-					</div>
-				</div>
-			</div>
 			<div>
-				<div>
-					<p>Your Frequency</p>
-					<p>Personalized for Lyra Voss</p>
+				<div class="grid grid-cols-4 gap-4">
+					{
+						songs.map((song) => {
+							return <Musica song={song} />;
+						})
+					}
+				</div>
+				<div class="flex py-10 gap-4">
 					<div>
-						<p>see all</p>
+						<img src="/unnamed-(1).png" alt="" />
+						<div>
+							<p class="font-bold">Synthetic Dreams</p>
+							<p>Vector Sector</p>
+						</div>
+					</div>
+					<div>
+						<img src="/unnamed-(2).png" alt="" />
+						<div>
+							<p class="font-bold">Midnight Radio</p>
+							<p>The Night Walkers</p>
+						</div>
+					</div>
+					<div>
+						<img src="/unnamed-(3).png" alt="" />
+						<div>
+							<p class="font-bold">Cosmic Drift</p>
+							<p>Nebula Theory</p>
+						</div>
+					</div>
+					<div>
+						<img src="/unnamed-(4).png" alt="" />
+						<div>
+							<p class="font-bold">Urban Pulse</p>
+							<p>Concrete Jungle</p>
+						</div>
 					</div>
 				</div>
-				<div>
-					<div>
+				<div class="flex gap-4">
+					<div class="flex-1">
+						<img src="/unnamed-(5).png" alt="" />
 						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
-						</div>
-						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
-						</div>
-						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
-						</div>
-						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
+							<p class="font-bold">snooo dogg</p>
+							<p>I Wanna Love You</p>
 						</div>
 					</div>
-					<div>
+					<div class="flex-1">
+						<img src="/unnamed-(6).png" alt="" />
 						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
+							<p class="font-bold">Payphone</p>
+							<p>Maroon 5</p>
 						</div>
+					</div>
+					<div class="flex-1">
+						<img src="/unnamed-(7).png" alt="" />
 						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
+							<p class="font-bold">Roar</p>
+							<p>Katy Perry</p>
 						</div>
+					</div>
+					<div class="flex-1">
+						<img src="/unnamed-(8).png" alt="" />
 						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
-						</div>
-						<div>
-							<img src="" alt="">
-							<div>
-								<p></p>
-								<p></p>
-							</div>
+							<p class="font-bold">Windflower</p>
+							<p>Billie eilish</p>
 						</div>
 					</div>
 				</div>
