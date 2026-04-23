@@ -5,7 +5,7 @@ const song = Astro.props.song;
 <div class="cursor-pointer" id={song._id}>
     <div class="py-5 gap-4">
         <div>
-            <img src={song.album.image.url} alt="" class="w-56 h-56">
+            <img class="rounded-3xl" src={song.album.image.url} alt="" class="w-56 h-56">
         </div>
         <div>
             <p class="font-bold">{song.title}</p>
